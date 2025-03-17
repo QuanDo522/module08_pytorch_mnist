@@ -151,13 +151,11 @@ def plot(loss_list, acc_train, acc_test, save_path='./figure.png'):
     """
     This function is a plotting helper function that will generate a curve detailing model performance over the training steps
     """
-    # Plot the loss & accuracy curves
-    plt.figure(figsize=(10, 4))
-
     # Plot the training loss over iterations
-    plt.subplot(1, 2, 1)
     plt.plot(loss_list)
+    plt.title('Training Loss over the Epochs')
     plt.xlabel('Iteration')
+    plt.ylabel('Training Loss')
     plt.savefig(save_path)
 
 def myargs():
